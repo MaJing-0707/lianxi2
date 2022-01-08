@@ -8,7 +8,7 @@ export default function() {
         <li>To get started, edit <code>src/pages/index.js</code> and save to reload.</li>
         <li>111
           <a href="https://umijs.org/guide/getting-started.html">
-            Getting Started  77
+            Getting Started  778
           </a>
         </li>
       </ul>
