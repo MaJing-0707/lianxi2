@@ -1,17 +1,24 @@
 import styles from './index.css';
+import { router } from 'umi';
 
-export default function() {
-  return (
-    <div className={styles.normal}>
-      <div className={styles.welcome} />
-      <ul className={styles.list}>
-        <li>To get started, edit <code>src/pages/index.js</code> and save to reload.</li>
-        <li>111
-          <a href="https://umijs.org/guide/getting-started.html">
-            Getting Started  778
-          </a>
-        </li>
-      </ul>
-    </div>
-  );
+import React, { PureComponent } from 'react';
+
+class Index extends PureComponent {
+  render() {
+    const list = [
+      {title:'getSnapshotBeforeUpdate生命周期',router:'/thelifecycle/thelifecycle'}
+    ]
+    return (
+      <div className={styles.normal}>
+        <ul className={styles.list}>
+          {
+            list.map(item=><li onClick={()=>router.push(item.router)}>{item.title}</li>)
+          }
+        </ul>
+      </div>
+    );
+  }
 }
+
+
+export default Index;
